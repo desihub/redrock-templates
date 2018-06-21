@@ -1,5 +1,9 @@
 # redrock-templates
 
+## Version 0.7...2018.06.21
+
+* add version number to individual fits file
+
 ## Version 0.6
 
 * Expanded rrtemplate-star-WD.fits training to include DA and DB subtypes
