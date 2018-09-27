@@ -1,5 +1,9 @@
 # redrock-templates
 
+## Version 0.8 (unreleased)
+
+* No changes yet.
+
 ## Version 0.7 (2018-09-26)
 
 * Add Missing lines to templates,
