@@ -2,7 +2,7 @@
 
 ## Version 0.8 (unreleased)
 
-* No changes yet.
+* Add module file, PR [#9](https://github.com/desihub/redrock-templates/pull/9)
 
 ## Version 0.7 (2018-09-26)
 
