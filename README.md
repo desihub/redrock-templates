@@ -1,3 +1,3 @@
 # redrock-templates
 
-Templates for [redrock](https://github.com/sbailey/redrock).
+Templates for [redrock](https://github.com/desihub/redrock).
