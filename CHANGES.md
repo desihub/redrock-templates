@@ -1,8 +1,9 @@
 # redrock-templates
 
-## Version 0.8 (unreleased)
+## Version 0.7.1 (2020-01-29)
 
-* Add module file, PR [#9](https://github.com/desihub/redrock-templates/pull/9)
+* Add module file, PR [#9](https://github.com/desihub/redrock-templates/pull/9).
+* No changes to data files.
 
 ## Version 0.7 (2018-09-26)
 
