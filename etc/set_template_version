@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+
+"""
+Set the version header string for a specific template file
+"""
+
+from astropy.io import fits
+import argparse
+
+parser = argparse.ArgumentParser(
+    usage = "set_template_version filename version",
+    description = "Modifies the VERSION header keyword of a template file")
+parser.add_argument("filename", type=str,  help="template filename")
+parser.add_argument("version", type=str,  help="version number e.g. X.Y or X.Y.Z")
+
+args = parser.parse_args()
+
+with fits.open(args.filename, mode='update') as fx:
+    fx[0].header['VERSION'] = args.version
+
+#- Double check
+hdr = fits.getheader(args.filename, 0)
+if hdr['VERSION'] != args.version:
+    print('ERROR: version not updated correctly ({} != {})'.format(
+        hdr['VERSION'], args.version))
+else:
+    print(f'SUCCESS: Updated {args.filename} to version {args.version}')

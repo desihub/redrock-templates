@@ -1,0 +1,45 @@
+{
+  "version": "0.7.2",
+  "templates": {
+    "rrtemplate-galaxy.fits": {
+      "version": "2.6",
+      "sha256": "4b723c70d0c4a09cfe213701a85d625778bf7860781aabd5d9c796ce7ce2ee48"
+    },
+    "rrtemplate-qso.fits": {
+      "version": "0.1",
+      "sha256": "2fad8cba0de0213b456d5b5eb5b264bde19b1056de517cc7fa5ac63a9f39ba2b"
+    },
+    "rrtemplate-star-A.fits": {
+      "version": "0.1",
+      "sha256": "12ebbe0dd4da723612d488fe3bb618ac68876f9749e16b4f36850d91cd93fc63"
+    },
+    "rrtemplate-star-B.fits": {
+      "version": "0.1",
+      "sha256": "1390810605e85c351f798770b59b2dce62e7a600cb42a2297e70c8551651b8d3"
+    },
+    "rrtemplate-star-CV.fits": {
+      "version": "0.1",
+      "sha256": "5aaa805fc16a9afc20e0f3414649ce0fabf40a3be863ba0df443165e250099f9"
+    },
+    "rrtemplate-star-F.fits": {
+      "version": "0.1",
+      "sha256": "0aa9c242ce499d77930488fa8a22394f76ed90832e6073c38904e678e9fd3c5a"
+    },
+    "rrtemplate-star-G.fits": {
+      "version": "0.1",
+      "sha256": "3a12ffdc436910ebf1a570e923505f198df82fac33e6a4a1171c65d48b52403a"
+    },
+    "rrtemplate-star-K.fits": {
+      "version": "0.1",
+      "sha256": "f3b27bf7e4dc9bb517478620edc1e524baf09539f5e252a54d20f22b2888cb98"
+    },
+    "rrtemplate-star-M.fits": {
+      "version": "0.1",
+      "sha256": "57acd91d7ee0972ad2c5f3e3fa3d068936c4198dc80ed188155f9228708b12bf"
+    },
+    "rrtemplate-star-WD.fits": {
+      "version": "0.1",
+      "sha256": "72a94af5fbd8d2248e2b8d0046a474a3832d7d7fccab0d73ea4ce282704dd12a"
+    }
+  }
+}

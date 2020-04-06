@@ -1,0 +1,82 @@
+#!/usr/bin/env python
+
+"""
+Update version file for entire template suite
+"""
+
+import sys
+import json
+import hashlib
+import argparse
+import glob
+import subprocess
+from astropy.io import fits
+
+parser = argparse.ArgumentParser(
+    usage = "set_template_version filename version",
+    description = "Writes new version.json with template versions but does"
+                  " not make a git tag"
+    )
+parser.add_argument("version", type=str,  help="version number e.g. X.Y or X.Y.Z")
+args = parser.parse_args()
+
+#- Confirm that this is actually a new version
+with open('version.json', 'r') as fx:
+    previous_version = json.load(fx)
+
+if previous_version['version'] == args.version:
+    print(f'ERROR: version.json is already set to {args.version}')
+    sys.exit(1)
+
+#- Get template versions and checksums
+version_dict = dict(version=args.version, templates=dict())
+for filename in sorted(glob.glob('rrtemplate*.fits')):
+    try:
+        version = fits.getval(filename, 'VERSION')
+    except KeyError:
+        print(f'ERROR: {filename} missing VERSION keyword')
+        sys.exit(1)
+
+    with open(filename, 'rb') as fx:
+        sha256 = hashlib.sha256(fx.read()).hexdigest()
+
+    if filename in previous_version['templates'] and \
+            previous_version['templates'][filename]['version'] == version and \
+            previous_version['templates'][filename]['sha256'] != sha256:
+        print(f'ERROR: {filename} changed but VERSION is still same {version}')
+        sys.exit(1)
+    
+    if filename not in previous_version['templates']:
+        comment = f'{version} new'
+    elif previous_version['templates'][filename]['version'] == version:
+        comment = f'{version}'
+    else:
+        comment = "{} -> {}".format(
+            previous_version['template'][filename]['version'], version)
+
+    version_dict['templates'][filename] = dict(version=version, sha256=sha256)
+    print(f'{filename:26s} {sha256} {comment}')
+
+#- Write version.json
+with open('version.json', 'w') as fx:
+    json.dump(version_dict, fx, indent=2)
+
+print(f'Updated version.json for {args.version}')
+
+#- If this is a git repo, check for uncommited templates
+changed_files = list()
+gitcheck = subprocess.check_output(['git', 'status', '--porcelain'])
+for line in gitcheck.decode().split('\n'):
+    code = line[0:2]
+    filename = line[3:]
+    if filename.startswith('rrtemplate-') and code in (' M', '??'):
+        changed_files.append(filename)
+
+#- What's next?
+print('Suggested next steps:')
+print(f'  git add version.json')
+for filename in changed_files:
+    print(f'  git add {filename}')
+print(f'  git commit -m "updating version.json {args.version}"')
+print(f'  git tag -m "redrock-templates version {args.version}" -a {args.version}')
+print(f'  git push origin {args.version}')

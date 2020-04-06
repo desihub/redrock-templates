@@ -1,0 +1,38 @@
+#!/usr/bin/env python
+
+"""
+Check that template files match the version.json file
+"""
+
+import sys
+import json
+import hashlib
+import argparse
+import glob
+from astropy.io import fits
+
+with open('version.json', 'r') as fx:
+    versioninfo = json.load(fx)
+
+error = False
+for filename, info in versioninfo['templates'].items():
+    template_version = fits.getval(filename, 'VERSION')
+    with open(filename, 'rb') as fx:
+        sha256 = hashlib.sha256(fx.read()).hexdigest()
+    
+    if info['version'] != template_version:
+        print('ERROR: {} keyword VERSION {} != version.json entry {}'.format(
+            filename, template_version, info['version']))
+        error = True
+
+    if info['sha256'] != sha256:
+        print('ERROR: {} sha256 mismatch ...{} != ...{}'.format(
+            filename, sha256[-8:], info['sha256'][-8:]))
+        error = True
+    
+if error:
+    sys.exit(1)
+else:
+    print('All OK')
+    sys.exit(0)    
+    
