@@ -1,8 +1,14 @@
 # redrock-templates
 
-# Version 0.8 (unreleased)
+## Version 0.8 (unreleased)
 
 * No changes yet.
+
+## Version 0.7.2 (2020-04-06)
+
+* Added VERSION keywords to templates that were missing them.
+* Added utility scripts to etc/ for managing versions.
+* Added version.json file
 
 ## Version 0.7.1 (2020-01-29)
 

@@ -69,7 +69,7 @@ gitcheck = subprocess.check_output(['git', 'status', '--porcelain'])
 for line in gitcheck.decode().split('\n'):
     code = line[0:2]
     filename = line[3:]
-    if filename.startswith('rrtemplate-') and code in (' M', '??'):
+    if filename.startswith('rrtemplate-') and code in (' M', '??', 'A '):
         changed_files.append(filename)
 
 #- What's next?
