@@ -1,8 +1,13 @@
 # redrock-templates
 
-# Version 0.8 (unreleased)
+## Version 0.9 (unreleased)
 
 * No changes yet.
+
+## Version 0.8 (2022-08-08)
+
+* New QSO templates split into two redshift ranges,
+  PR [#10](https://github.com/desihub/redrock-templates/pull/10).
 
 ## Version 0.7.1 (2020-01-29)
 
