@@ -2,9 +2,19 @@
 
 ## Version 0.9 (unreleased)
 
-* No changes yet.
+* Reorganize template filenames
+  PR[#12](https://github.com/desihub/redrock-templates/pull/12)
+
+## Version 0.8.1 (2023-12-01)
+
+This tag was used for post-Iron analyses, including the QSO LSS
+catalog used in DR1.
+
+* Updated QSO-HIZ with better IGM absorption model.
 
 ## Version 0.8 (2022-08-08)
+
+This tag was used for DESI Iron/DR1.
 
 * New QSO templates split into two redshift ranges,
   PR [#10](https://github.com/desihub/redrock-templates/pull/10).
