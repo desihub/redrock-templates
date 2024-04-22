@@ -1,0 +1,12 @@
+# Redrock templates 0.7.2
+# Used for DESI Fuji/EDR
+rrtemplate-GALAXY-None-v2.6.fits
+rrtemplate-QSO-None-v0.1.fits
+rrtemplate-STAR-A-v0.1.fits
+rrtemplate-STAR-B-v0.1.fits
+rrtemplate-STAR-CV-v0.1.fits
+rrtemplate-STAR-F-v0.1.fits
+rrtemplate-STAR-G-v0.1.fits
+rrtemplate-STAR-K-v0.1.fits
+rrtemplate-STAR-M-v0.1.fits
+rrtemplate-STAR-WD-v0.1.fits

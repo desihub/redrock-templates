@@ -1,0 +1,11 @@
+rrtemplate-GALAXY-None-v2.6.fits
+rrtemplate-QSO-LOZ-v1.0.fits
+rrtemplate-QSO-HIZ-v1.1.fits
+rrtemplate-STAR-A-v0.1.fits
+rrtemplate-STAR-B-v0.1.fits
+rrtemplate-STAR-CV-v0.1.fits
+rrtemplate-STAR-F-v0.1.fits
+rrtemplate-STAR-G-v0.1.fits
+rrtemplate-STAR-K-v0.1.fits
+rrtemplate-STAR-M-v0.1.fits
+rrtemplate-STAR-WD-v0.1.fits
