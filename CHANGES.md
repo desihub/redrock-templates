@@ -1,6 +1,10 @@
 # redrock-templates
 
-## Version 0.9 (unreleased)
+## Version 0.9.1 (unreleased)
+
+* No changes yet.
+
+## Version 0.9 (2024-04-30)
 
 * Reorganize template filenames
   PR[#12](https://github.com/desihub/redrock-templates/pull/12)
