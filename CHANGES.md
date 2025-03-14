@@ -1,8 +1,13 @@
 # redrock-templates
 
-## Version 0.9.1 (unreleased)
+## Version 0.9.2 (unreleased)
 
 * No changes yet.
+
+## Version 0.9.1 (2025-03-14)
+
+* Added ``templates-*.txt`` definitions for 0.9, 0.9.1, kibo, and loa
+  (all identical)
 
 ## Version 0.9 (2024-04-30)
 
