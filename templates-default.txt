@@ -1,5 +1,5 @@
 rrtemplate-GALAXY-None-v2.6.fits
-rrtemplate-QSO-LOZ-v1.0.fits
+rrtemplate-QSO-LOZ-v1.1.fits
 rrtemplate-QSO-HIZ-v1.1.fits
 rrtemplate-STAR-A-v0.1.fits
 rrtemplate-STAR-B-v0.1.fits
