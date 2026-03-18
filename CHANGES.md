@@ -1,8 +1,12 @@
 # redrock-templates
 
-## Version 0.9.2 (unreleased)
+## Version 0.10.1 (unreleased)
 
 * No changes yet.
+
+## Version 0.10.0 (2026-03-18)
+
+* Shift QSO-LOZ template to correct redshift bias, PR [#14](https://github.com/desihub/redrock-templates/pull/10)
 
 ## Version 0.9.1 (2025-03-14)
 
