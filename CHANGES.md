@@ -2,7 +2,7 @@
 
 ## Version 0.10.1 (unreleased)
 
-* No changes yet.
+* add matterhorn and nevis template txt files (PR [#16](https://github.com/desihub/redrock-templates/pull/16)).
 
 ## Version 0.10.0 (2026-03-18)
 
